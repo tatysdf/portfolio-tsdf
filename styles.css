@@ -1,0 +1,260 @@
+/* ========== Design System ========== */
+:root {
+  --primary: #1f3a8a; /* Indigo/Navy */
+  --accent: #ff6b6b; /* Coral */
+  --text: #0f172a; /* Slate très foncé */
+  --muted: #64748b; /* Gris bleuté */
+  --bg: #ffffff; /* Blanc retouché */
+  --border: #e2e8f0; /* Gris clair */
+  --radius: 14px;
+  --shadow-sm: 0 6px 18px rgba(31, 58, 138, 0.08);
+  --shadow-md: 0 12px 28px rgba(31, 58, 138, 0.12);
+  --container: 1100px;
+}
+
+/* ========== Fond blanc retouché ========== */
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: radial-gradient(
+      1200px 500px at 10% -10%,
+      rgba(31, 58, 138, 0.035),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 400px at 90% -20%,
+      rgba(255, 107, 107, 0.05),
+      transparent 60%
+    ),
+    #fff;
+  margin: 0;
+}
+
+body::before {
+  /* Grain très léger en overlay */
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0.1'/><feComponentTransfer><feFuncA type='table' tableValues='0 0 0 0.06 0.09 0.12 0.12'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.05'/></svg>");
+  pointer-events: none;
+}
+
+/* ========== Layout & Responsiveness ========== */
+.content {
+  width: min(100% - 2rem, var(--container));
+  margin: 2rem auto;
+}
+.section {
+  padding: clamp(2rem, 4vw, 3.5rem) 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Titres & textes */
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--text);
+  position: relative;
+}
+h1::after {
+  /* Soulignement discret en dégradé */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 72px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+h2 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  margin: 0 0 1rem;
+}
+h3 {
+  font-size: 1.15rem;
+  margin: 0 0 0.5rem;
+}
+p {
+  color: var(--muted);
+}
+
+/* ========== About ========== */
+.about {
+  padding: clamp(1rem, 3vw, 2rem);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.about p {
+  max-width: 65ch;
+}
+
+/* Social icons */
+.social-media ul {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+.social-media a {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: #fff;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+.social-media a:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+  border-color: rgba(31, 58, 138, 0.25);
+  box-shadow: 0 8px 18px rgba(31, 58, 138, 0.12);
+}
+
+/* ========== Projects ========== */
+.projects {
+  margin-top: 2rem;
+}
+
+.project-item a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+ 
+}
+
+.project-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 992px) {
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+.project-item img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+.project-item p {
+  padding: 0 1rem 1rem;
+}
+.project-item h3 {
+  padding: 1rem 1rem 0;
+}
+.project-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(31, 58, 138, 0.2);
+}
+
+/* ========== Certifications ========== */
+.certifications {
+  width: min(100% - 2rem, var(--container));
+  margin: 5rem auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 768px) {
+  .certifications {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.certification-item {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+.certification-item img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+.certification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(255, 107, 107, 0.25);
+}
+
+/* ========== Révélations au scroll ========== */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* ========== Barre de progression de scroll ========== */
+#scroll-progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 3px;
+  width: 0%;
+  z-index: 100;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow: 0 2px 8px rgba(31, 58, 138, 0.25);
+}
+
+/* Focus accessible */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.18);
+  border-radius: 8px;
+}
+
+/* Réduire les animations pour les utilisateurs sensibles */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
