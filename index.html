@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio - TATY Si De Flandres</title>
+    <meta
+      name="description"
+      content="Portfolio de TATY Si De Flandres — développeur et designer. Projets web (React, JS), UI/UX, certifications FreeCodeCamp."
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -18,15 +22,19 @@ https://fonts.googleapis.com
     <link rel="stylesheet" href="https://fonts.gstatic.com" />
   </head>
   <body>
-    <div class="content">
-      <div class="about">
-        <h1>TATY Si De Flandres</h1>
-        <p>
-          Bienvenue sur mon portfolio ! Je suis TATY Si De Flandres, développeur
-          et designer passionné. Vous trouverez ici des informations sur mes
-          projets et mes compétences.
-        </p>
-        <div class="social-media">
+    <!-- Barre de progression de scroll -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="content header-inner">
+        <div class="brand">
+          <h1 id="site-title" class="typing">TATY Si De Flandres</h1>
+          <p class="subtitle">
+            Développeur & Designer - React, JavaScript, UI/UX
+          </p>
+        </div>
+
+        <nav class="social-media" aria-label="Réseaux sociaux">
           <ul>
             <li>
               <a href="https://www.instagram.com/djesstaty/"
@@ -56,146 +64,353 @@ https://fonts.googleapis.com
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
+
+        <!-- Toggle dark mode -->
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Basculer le thème (clair/sombre)"
+        >
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
       </div>
-      <div class="projects">
-        <h2>Projets Récents</h2>
-        <div class="project-list">
-          <div class="project-item">
-            <a href="https://cine-finder-taty.netlify.app/" target="_blank">
-              <h3>Cine Finder</h3>
-              <img src="./assets/images/projet1.jpg" alt="Image du projet 1" />
-              <p>
-                Application React de recherche de films par titre, possibilité
-                de filtrer par popularité. Capacité à afficher les détails des
-                films sélectionnés, pouvoir ajouter en favoris.
-              </p>
-            </a>
-          </div>
-          <div class="project-item">
-            <a href="https://playlist-taty.netlify.app/" target="_blank">
-              <h3>Playlist App</h3>
-              <img src="./assets/images/projet2.jpg" alt="Image du projet 2" />
-              <p>
-                Application de gestion de playlists musicales.Possibilité de
-                passer à la musique suivante/précédente. Bouton de
-                lecture/pause.
-              </p>
-            </a>
-          </div>
-          <div class="project-item">
-            <a href="https://platform-game-tsdf.netlify.app/"   target="_blank">
-              <h3>Jeu de plateforme 3D</h3>
-              <img src="./assets/images/projet3.jpg" alt="Image du projet 3" />
-              <p>
-                Jeu de plateforme en 3D en utilisant l'API Canva de Js et de la
-                Programmation Orientée Objet. <strong>Desktop Only</strong>
-              </p>
-            </a>
-          </div>
+    </header>
 
-          <div class="project-item">
-            <a href="https://todo-list-taty.netlify.app/" target="_blank">
-              <h3>Todo List</h3>
-              <img src="./assets/images/projet4.jpg" alt="Image du projet 4" />
-              <p>
-                Listes de tâches à faire en JavaScript. Possibilité d'ajouter,
-                de supprimer en sauvegardant les modifications.
-              </p>
-            </a>
-          </div>
-
-          <div class="project-item">
-            <a href="https://flandres-weather.netlify.app/" target="_blank">
-              <h3>Flandres Weather</h3>
-              <img src="./assets/images/projet5.jpg" alt="Image du projet 5" />
-              <p>
-                Application React de météo pour n'importe quelle ville,
-                affichant les prévisions et les conditions actuelles.
-              </p>
-            </a>
-          </div>
-
-          <div class="project-item">
-            <a href="https://calorie-counter-tsdf.netlify.app/" target="_blank">
-              <h3>Calories Counter</h3>
-              <img src="./assets/images/projet6.jpg" alt="Image du projet 6" />
-              <p>
-                Application de suivi des calories consommées et dépensées, avec
-                possibilité d'ajouter des aliments et des activités physiques.
-                Montrant si vous etes en suprlus ou en déficit calorique.
-              </p>
-            </a>
-          </div>
-
-          <div class="project-item">
-            <a href="https://restaurant-taty.netlify.app/" target="_blank">
-              <h3>The Resto</h3>
-              <img src="./assets/images/projet7.jpg" alt="Image du projet 7" />
-              <p>
-                Site statique de restaurant avec menu et informations de
-                contact.
-              </p>
-            </a>
-          </div>
-
-          <div class="project-item">
-            <a href="https://table-excel-taty.netlify.app/" target="_blank">
-              <h3>Excel table</h3>
-              <img src="./assets/images/projet8.jpg" alt="Image du projet 8" />
-              <p>
-                Tableau excel fait en utilisant une logique de programmation
-                fonctionnelle en JavaScript. Possibilité d'ajouter des lignes et
-                des colonnes, faire des opérations entre cellules.
-              </p>
-            </a>
-          </div>
-
-          <div class="project-item">
-            <a href="https://gaming-campus-taty.netlify.app/" target="_blank">
-              <h3>Gaming Campus</h3>
-              <img src="./assets/images/projet9.jpg" alt="Image du projet 9" />
-              <p>Site statique pour un campus de jeux vidéo.</p>
-            </a>
-          </div>
-
-          <div class="project-item">
-            <a href="https://la-montagne.netlify.app/" target="_blank">
-            <h3>La Montagne</h3>
-            <img src="./assets/images/projet10.jpg" alt="Image du projet 10" />
+    <main>
+      <!-- About -->
+      <section class="section about reveal" aria-labelledby="about-title">
+        <div class="content">
+          <h2 id="about-title">À propos</h2>
+          <div class="about-card">
             <p>
-              Site d'actualités et d'informations sur la montagne, avec articles
-              et photos.
+              Bienvenue sur mon portfolio&nbsp;! Je suis TATY Si De Flandres,
+              développeur et designer passionné maitrisant JavaScript et React.
+              Vous trouverez ici des informations sur mes projets et mes
+              compétences.
             </p>
-            </a>
+            <p>
+              N'hésitez pas à me contacter pour toute opportunité ou
+              collaboration&nbsp;!
+            </p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="certif">
-      <div class="certifications">
-        <div class="certification-item">
-          <h3>Certification 1</h3>
-          <img
-            src="./assets/images/certification1.jpg"
-            alt="Image de la certification 1"
-          />
-          <p>Certification freecodecamp en responsive web design</p>
-        </div>
-        <div class="certification-item">
-          <h3>Certification 2</h3>
-          <img
-            src="./assets/images/certification2.jpg"
-            alt="Image de la certification 2"
-          />
-          <p>
-            Certification freecodecamp en JavaScript Algorithms and Data
-            Structures
-          </p>
-        </div>
-      </div>
-    </div>
+      </section>
 
+      <!-- Projects -->
+      <section class="section projects reveal" aria-labelledby="projects-title">
+        <div class="content">
+          <h2 id="projects-title">Projets Récents</h2>
+
+          <div class="project-list">
+            <article class="project-item" aria-labelledby="proj1-title">
+              <a href="https://cine-finder-taty.netlify.app/" target="_blank">
+                <h3 id="proj1-title">Cine Finder</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet1.webp"
+                    alt="image du projet 1"
+                  />
+                </picture>
+                <p>
+                  Application React de recherche de films par titre, filtres par
+                  popularité, détails et favoris.
+                </p>
+              </a>
+            </article>
+
+            <article class="project-item" aria-labelledby="proj2-title">
+              <a href="https://playlist-taty.netlify.app/" target="_blank">
+                <h3 id="proj2-title">Playlist App</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet2.webp"
+                    alt="image du projet 2"
+                  />
+                </picture>
+                <p>
+                  Application de gestion de playlists musicales
+                  (suivant/précédent, lecture/pause).
+                </p>
+              </a>
+            </article>
+
+            <article class="project-item" aria-labelledby="proj3-title">
+              <a href="https://platform-game-tsdf.netlify.app/" target="_blank">
+                <h3 id="proj3-title">Jeu de plateforme 3D</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet3.webp"
+                    alt="image du projet 3"
+                  />
+                </picture>
+                <p>
+                  Jeu 3D avec Canvas API et POO. <strong>Desktop Only</strong>.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj4-title">
+              <a href="https://todo-list-taty.netlify.app/" target="_blank">
+                <h3 id="proj4-title">Todo List</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet4.webp"
+                    alt="image du projet 4"
+                  />
+                </picture>
+                <p>
+                  Listes de tâches à faire en JavaScript. Possibilité d'ajouter,
+                  de supprimer en sauvegardant les modifications.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj5-title">
+              <a href="https://flandres-weather.netlify.app/" target="_blank">
+                <h3 id="proj5-title">Flandres Weather</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet5.webp"
+                    alt="image du projet 5"
+                  />
+                </picture>
+                <p>
+                  Application React de météo pour n'importe quelle ville,
+                  affichant les prévisions et les conditions actuelles.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj6-title">
+              <a
+                href="https://calorie-counter-tsdf.netlify.app/"
+                target="_blank"
+              >
+                <h3 id="proj6-title">Calories counter</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet6.webp"
+                    alt="image du projet 6"
+                  />
+                </picture>
+                <p>
+                  Application de suivi des calories consommées et dépensées,
+                  avec possibilité d'ajouter des aliments et des activités
+                  physiques. Montrant si vous etes en suprlus ou en déficit
+                  calorique.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj7-title">
+              <a href="https://restaurant-taty.netlify.app/" target="_blank">
+                <h3 id="proj7-title">The Resto</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet7.webp"
+                    alt="image du projet 7"
+                  />
+                </picture>
+                <p>
+                  Site statique de restaurant avec menu et informations de
+                  contact.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj8-title">
+              <a href="https://table-excel-taty.netlify.app/" target="_blank">
+                <h3 id="proj8-title">Tableau Excel</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet8.webp"
+                    alt="image du projet 8"
+                  />
+                </picture>
+                <p>
+                  Tableau excel fait en utilisant une logique de programmation
+                  fonctionnelle en JavaScript. Possibilité d'ajouter des lignes
+                  et des colonnes, faire des opérations entre cellules.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj9-title">
+              <a href="https://gaming-campus-taty.netlify.app/" target="_blank">
+                <h3 id="proj9-title">Gaming campus</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet9.webp"
+                    alt="image du projet 9"
+                  />
+                </picture>
+                <p>Site statique et responsive pour un campus de jeux vidéo.</p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj10-title">
+              <a href="https://la-montagne.netlify.app/" target="_blank">
+                <h3 id="proj10-title">La montagne</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet10.webp"
+                    alt="image du projet 10"
+                  />
+                </picture>
+                <p>
+                  Site d'actualités et d'informations sur la montagne, avec
+                  articles et photos.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj11-title">
+              <a href="https://calculator-tsdf.netlify.app/" target="_blank">
+                <h3 id="proj11-title">Calculator</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet11.webp"
+                    alt="image du projet 11"
+                  />
+                </picture>
+                <p>
+                  Calculatrice basique en JavaScript avec opérations
+                  fondamentales.
+                </p>
+              </a>
+            </article>
+            <article class="project-item" aria-labelledby="proj12-title">
+              <a href="https://timer-tsdf.netlify.app/" target="_blank">
+                <h3 id="proj12-title">Horloge 25+5</h3>
+                <picture>
+                  <img
+                    src="./assets/images/projet12.webp"
+                    alt="image du projet 12"
+                  />
+                </picture>
+                <p>
+                  Horloge Pomodoro 25+5 en JavaScript pour la gestion du temps.
+                </p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills reveal" aria-labelledby="skills-title">
+        <div class="content">
+          <h2 id="skills-title">Compétences</h2>
+
+          <div class="skills-grid">
+            <div class="skill-item float-delay-1">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML5</span>
+            </div>
+
+            <div class="skill-item float-delay-2">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span>CSS3</span>
+            </div>
+
+            <div class="skill-item float-delay-3">
+              <i class="fa-brands fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+
+            <div class="skill-item float-delay-4">
+              <i class="fa-brands fa-react"></i>
+              <span>React</span>
+            </div>
+
+            <div class="skill-item float-delay-5">
+              <i class="fa-brands fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+
+            <div class="skill-item float-delay-6">
+              <i class="fa-brands fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+
+            <div class="skill-item float-delay-7">
+              <i class="fa-solid fa-database"></i>
+              <span>SQL</span>
+            </div>
+
+            <div class="skill-item float-delay-8">
+              <i class="fa-brands fa-figma"></i>
+              <span>Figma</span>
+            </div>
+
+            <div class="skill-item float-delay-9">
+              <i class="fa-solid fa-pencil-ruler"></i>
+              <span>UI/UX Design</span>
+            </div>
+            <div class="skill-item float-delay-10">
+              <i class="fa-solid fa-code"></i>
+              <span>Programmation Orientée Objet</span>
+            </div>
+            <div class="skill-item float-delay-11">
+              <i class="fa-brands fa-bootstrap"></i>
+              <span>Bootstrap</span>
+            </div>
+            <div class="skill-item float-delay-12">
+              <i class="fa-brands fa-sass"></i>
+              <span>Sass</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications -->
+      <section class="section certif reveal" aria-labelledby="cert-title">
+        <div class="content">
+          <h2 id="cert-title">Certifications</h2>
+          <div class="certifications">
+            <article class="certification-item" aria-labelledby="cert1-title">
+              <h3 id="cert1-title">Certification 1</h3>
+              <picture>
+                <img
+                  src="./assets/images/certification1.webp"
+                  alt="Image de la certification 1"
+                />
+              </picture>
+              <p>Certification FreeCodeCamp en Responsive Web Design.</p>
+            </article>
+
+            <article class="certification-item" aria-labelledby="cert2-title">
+              <h3 id="cert2-title">Certification 2</h3>
+              <picture>
+                <img
+                  src="./assets/images/certification2.webp"
+                  alt="Image de la certification 2"
+                />
+              </picture>
+              <p>
+                Certification FreeCodeCamp en JavaScript Algorithms and Data
+                Structures.
+              </p>
+            </article>
+            <article class="certification-item" aria-labelledby="cert3-title">
+              <h3 id="cert3-title">Certification 3</h3>
+              <picture>
+                <img
+                  src="./assets/images/certification3.webp"
+                  alt="Image de la certification 3"
+                />
+              </picture>
+              <p>
+                Certification FreeCodeCamp en Front End Development Libraries.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content">
+        <p>
+          © <span id="year"></span> TATY Si De Flandres - Tous droits réservés.
+        </p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
+<!DOCTYPE html>
