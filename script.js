@@ -176,13 +176,6 @@ toggleBtn.addEventListener("click", () => {
   applyTheme(nowDark);
 });
 
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const openCvBtn = document.getElementById("open-cv");
   const cvModal = document.getElementById("cv-modal");
@@ -209,14 +202,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const scrollTopBtn = document.getElementById("scroll-top");
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    scrollTopBtn.classList.add("show");
+  } else {
+    scrollTopBtn.classList.remove("show");
+  }
+});
 
-
-
-
-
-
-
-
-
-
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});

@@ -220,7 +220,7 @@ p {
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
-@media (max-width: 680px) {
+@media (max-width: 780px) {
   #theme-toggle {
     margin: 0 auto;
   }
@@ -258,11 +258,12 @@ p {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   align-items: center;
   justify-content: center;
-  z-index: 999;
+  padding: 1rem;
+  z-index: 1000;
 }
 
 .modal.active {
@@ -271,13 +272,13 @@ p {
 
 .modal-content {
   background: var(--bg);
-  padding: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  height: 85vh;
   border-radius: 12px;
-  max-width: 800px;
-  width: 90%;
-  max-height: 90vh;
-  overflow: auto;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .modal-content iframe {
@@ -294,6 +295,20 @@ p {
   background: none;
   border: none;
   cursor: pointer;
+}
+
+.open-cv-mobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .open-cv-desktop {
+    display: none;
+  }
+
+  .open-cv-mobile {
+    display: inline-block;
+  }
 }
 
 .project-list {
@@ -508,6 +523,55 @@ p {
 }
 .contact .contact-form button:hover {
   background: var(--muted);
+}
+
+#scroll-top {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: none;
+  background: var(--text);
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scroll-top:hover {
+  background: var(--primary);
+  transform: translateY(-4px);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  #scroll-top {
+    width: 42px;
+    height: 42px;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1.6rem;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    color: var(--muted);
+  }
 }
 
 #scroll-progress {

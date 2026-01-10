@@ -97,9 +97,17 @@ https://fonts.googleapis.com
             </p>
             <div class="btn-container">
               <a href="#projects" class="btn">Voir mes projets</a>
-              <button class="btn btn-secondary" id="open-cv">
+              <button class="btn btn-secondary open-cv-desktop" id="open-cv">
                 Voir mon CV
               </button>
+              <a
+                href="./assets/cv-entreprise.pdf"
+                target="_blank"
+                class="btn btn-secondary open-cv-mobile"
+              >
+                Voir mon CV
+              </a>
+
               <a
                 href="./assets/cv-entreprise.pdf"
                 download
@@ -123,7 +131,7 @@ https://fonts.googleapis.com
 
           <div class="project-list">
             <article class="project-item" aria-labelledby="proj1-title">
-              <a href="https://cine-finder-taty.netlify.app/" target="_blank">
+              <a href="https://movie-app-tsdf.netlify.app/" target="_blank">
                 <h3 id="proj1-title">Cine Finder</h3>
                 <picture>
                   <img
@@ -494,12 +502,9 @@ https://fonts.googleapis.com
 
           <iframe
             src="./assets/cv-entreprise.pdf"
+            class="cv-pdf"
             title="CV de TATY Si De Flandres"
           ></iframe>
-
-          <a href="./assets/cv-entreprise.pdf" download class="btn">
-            Télécharger le CV
-          </a>
         </div>
       </div>
     </main>
@@ -511,6 +516,14 @@ https://fonts.googleapis.com
         </p>
       </div>
     </footer>
+
+    <button
+      id="scroll-top"
+      aria-label="Remonter en haut de la page"
+      title="Remonter en haut"
+    >
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>
