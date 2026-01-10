@@ -95,12 +95,29 @@ https://fonts.googleapis.com
               N'hésitez pas à me contacter pour toute opportunité ou
               collaboration&nbsp;!
             </p>
+            <div class="btn-container">
+              <a href="#projects" class="btn">Voir mes projets</a>
+              <button class="btn btn-secondary" id="open-cv">
+                Voir mon CV
+              </button>
+              <a
+                href="./assets/cv-entreprise.pdf"
+                download
+                class="btn btn-outline"
+              >
+                Télécharger mon CV
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- Projects -->
-      <section class="section projects reveal" aria-labelledby="projects-title">
+      <section
+        class="section projects reveal"
+        aria-labelledby="projects-title"
+        id="projects"
+      >
         <div class="content">
           <h2 id="projects-title">Projets Récents</h2>
 
@@ -118,6 +135,11 @@ https://fonts.googleapis.com
                   Application React de recherche de films par titre, filtres par
                   popularité, détails et favoris.
                 </p>
+                <ul class="project-stack">
+                  <li>React</li>
+                  <li>API TMDB</li>
+                  <li>Sass</li>
+                </ul>
               </a>
             </article>
 
@@ -134,6 +156,11 @@ https://fonts.googleapis.com
                   Application de gestion de playlists musicales
                   (suivant/précédent, lecture/pause).
                 </p>
+                <ul class="project-stack">
+                  <li>JavaScript</li>
+                  <li>HTML5 Audio API</li>
+                  <li>CSS3</li>
+                </ul>
               </a>
             </article>
 
@@ -149,6 +176,11 @@ https://fonts.googleapis.com
                 <p>
                   Jeu 3D avec Canvas API et POO. <strong>Desktop Only</strong>.
                 </p>
+                <ul class="project-stack">
+                  <li>JavaScript</li>
+                  <li>Canvas API</li>
+                  <li>POO</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj4-title">
@@ -164,6 +196,11 @@ https://fonts.googleapis.com
                   Listes de tâches à faire en JavaScript. Possibilité d'ajouter,
                   de supprimer en sauvegardant les modifications.
                 </p>
+                <ul class="project-stack">
+                  <li>JavaScript</li>
+                  <li>LocalStorage</li>
+                  <li>CSS3</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj5-title">
@@ -179,6 +216,11 @@ https://fonts.googleapis.com
                   Application React de météo pour n'importe quelle ville,
                   affichant les prévisions et les conditions actuelles.
                 </p>
+                <ul class="project-stack">
+                  <li>React</li>
+                  <li>API OpenWeather</li>
+                  <li>Sass</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj6-title">
@@ -196,9 +238,13 @@ https://fonts.googleapis.com
                 <p>
                   Application de suivi des calories consommées et dépensées,
                   avec possibilité d'ajouter des aliments et des activités
-                  physiques. Montrant si vous etes en suprlus ou en déficit
-                  calorique.
+                  physiques.
                 </p>
+                <ul class="project-stack">
+                  <li>JavaScript</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj7-title">
@@ -214,6 +260,11 @@ https://fonts.googleapis.com
                   Site statique de restaurant avec menu et informations de
                   contact.
                 </p>
+                <ul class="project-stack">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Responsive</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj8-title">
@@ -227,9 +278,13 @@ https://fonts.googleapis.com
                 </picture>
                 <p>
                   Tableau excel fait en utilisant une logique de programmation
-                  fonctionnelle en JavaScript. Possibilité d'ajouter des lignes
-                  et des colonnes, faire des opérations entre cellules.
+                  fonctionnelle en JavaScript.
                 </p>
+                <ul class="project-stack">
+                  <li>JavaScript</li>
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj9-title">
@@ -242,6 +297,11 @@ https://fonts.googleapis.com
                   />
                 </picture>
                 <p>Site statique et responsive pour un campus de jeux vidéo.</p>
+                <ul class="project-stack">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Responsive</li>
+                </ul>
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj10-title">
@@ -257,23 +317,14 @@ https://fonts.googleapis.com
                   Site d'actualités et d'informations sur la montagne, avec
                   articles et photos.
                 </p>
+                <ul class="project-stack">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>Responsive</li>
+                </ul>
               </a>
             </article>
-            <article class="project-item" aria-labelledby="proj11-title">
-              <a href="https://calculator-tsdf.netlify.app/" target="_blank">
-                <h3 id="proj11-title">Calculator</h3>
-                <picture>
-                  <img
-                    src="./assets/images/projet11.webp"
-                    alt="image du projet 11"
-                  />
-                </picture>
-                <p>
-                  Calculatrice basique en JavaScript avec opérations
-                  fondamentales.
-                </p>
-              </a>
-            </article>
+
             <article class="project-item" aria-labelledby="proj12-title">
               <a href="https://timer-tsdf.netlify.app/" target="_blank">
                 <h3 id="proj12-title">Horloge 25+5</h3>
@@ -283,9 +334,11 @@ https://fonts.googleapis.com
                     alt="image du projet 12"
                   />
                 </picture>
-                <p>
-                  Horloge Pomodoro 25+5 en JavaScript pour la gestion du temps.
-                </p>
+                <p>Horloge Pomodoro 25+5 en React pour la gestion du temps.</p>
+                <ul class="project-stack">
+                  <li>React</li>
+                  <li>CSS3</li>
+                </ul>
               </a>
             </article>
           </div>
@@ -401,6 +454,54 @@ https://fonts.googleapis.com
           </div>
         </div>
       </section>
+      <section
+        class="section contact reveal"
+        aria-labelledby="contact-title"
+        id="contact"
+      >
+        <div class="content">
+          <h2 id="contact-title">Contactez-moi</h2>
+          <p>
+            Vous avez un projet en tête ou souhaitez collaborer&nbsp;? N'hésitez
+            pas à me contacter&nbsp;!
+          </p>
+          <form
+            action="https://formspree.io/f/mzddpaeq"
+            method="POST"
+            class="contact-form"
+          >
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Envoyer</button>
+          </form>
+        </div>
+      </section>
+      <!-- Modal CV -->
+      <div id="cv-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button class="modal-close" aria-label="Fermer la modale">
+            &times;
+          </button>
+
+          <h2>Mon CV</h2>
+
+          <iframe
+            src="./assets/cv-entreprise.pdf"
+            title="CV de TATY Si De Flandres"
+          ></iframe>
+
+          <a href="./assets/cv-entreprise.pdf" download class="btn">
+            Télécharger le CV
+          </a>
+        </div>
+      </div>
     </main>
 
     <footer class="site-footer">

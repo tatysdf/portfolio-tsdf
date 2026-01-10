@@ -176,3 +176,47 @@ toggleBtn.addEventListener("click", () => {
   applyTheme(nowDark);
 });
 
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openCvBtn = document.getElementById("open-cv");
+  const cvModal = document.getElementById("cv-modal");
+  const closeModal = document.querySelector(".modal-close");
+
+  if (!openCvBtn || !cvModal || !closeModal) return;
+
+  openCvBtn.addEventListener("click", () => {
+    cvModal.classList.add("active");
+    cvModal.setAttribute("aria-hidden", "false");
+  });
+
+  closeModal.addEventListener("click", () => {
+    cvModal.classList.remove("active");
+    cvModal.setAttribute("aria-hidden", "true");
+  });
+
+  // Fermeture au clic extérieur
+  cvModal.addEventListener("click", (e) => {
+    if (e.target === cvModal) {
+      cvModal.classList.remove("active");
+      cvModal.setAttribute("aria-hidden", "true");
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
