@@ -151,6 +151,7 @@ p {
   animation: typing 2.6s steps(22), blink 0.6s step-end infinite,
     hideCaret 0s linear 2.6s forwards;
 }
+
 .typing::after {
   content: "";
   position: absolute;
@@ -173,12 +174,13 @@ p {
     border-color: transparent;
   }
 }
+
 @keyframes hideCaret {
   to {
     border-color: transparent;
   }
 }
-/* Hamburger button */
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -201,7 +203,6 @@ p {
   transition: all 0.3s ease;
 }
 
-/* Menu mobile */
 .main-nav {
   position: relative;
 }
@@ -233,12 +234,15 @@ p {
   .main-nav.active {
     transform: translateX(0);
   }
+
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
+
   .hamburger.active span:nth-child(2) {
     opacity: 0;
   }
+
   .hamburger.active span:nth-child(3) {
     transform: rotate(-45deg) translate(6px, -6px);
   }
@@ -283,10 +287,6 @@ p {
   transform: scaleX(1);
 }
 
-/* ============================= */
-/* GITHUB ICON */
-/* ============================= */
-
 .nav-github a,
 .theme-toggle {
   width: 42px;
@@ -317,6 +317,7 @@ p {
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .main-nav li {
     font-size: 14px;
   }
@@ -341,6 +342,7 @@ p {
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
+
 @media (max-width: 780px) {
   #theme-toggle {
     margin: 0 auto;
@@ -354,14 +356,18 @@ p {
   padding: clamp(1rem, 3vw, 2rem);
   box-shadow: var(--shadow-sm);
 }
+
 .btn-container {
   margin-top: 1.5rem;
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
+
 .btn i {
   font-size: 1.3rem;
 }
+
 .btn {
   padding: 0.75rem 1.5rem;
   border: none;
@@ -374,6 +380,7 @@ p {
   display: inline-block;
   transition: background 0.2s ease;
 }
+
 .btn:hover {
   background: var(--accent);
 }
@@ -519,6 +526,7 @@ p {
   font-size: 2.4rem;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -527,6 +535,7 @@ p {
   margin-top: 0.4rem;
   font-weight: 600;
 }
+
 .project-stack {
   display: flex;
   gap: 0.5rem;
@@ -590,6 +599,7 @@ p {
   transform: translateY(0);
   transition: all 0.6s ease;
 }
+
 .contact {
   max-width: 600px;
   margin: 0 auto;
@@ -608,10 +618,12 @@ p {
 .contact .content {
   text-align: center;
 }
+
 .contact .content p {
   margin-bottom: 1.5rem;
   color: #f0f0f0;
 }
+
 .contact .contact-form {
   display: flex;
   flex-direction: column;
@@ -619,6 +631,7 @@ p {
   max-width: 400px;
   margin: 0 auto;
 }
+
 .contact .contact-form input,
 .contact .contact-form textarea {
   width: 100%;
@@ -628,11 +641,13 @@ p {
   background: var(--bg-soft);
   color: var(--text);
 }
+
 .contact .contact-form input:focus,
 .contact .contact-form textarea:focus {
   outline: none;
   box-shadow: var(--focus-ring);
 }
+
 .contact .contact-form button {
   padding: 0.75rem;
   border: none;
@@ -644,6 +659,7 @@ p {
   transition: background 0.2s ease;
   margin-bottom: 15px;
 }
+
 .contact .contact-form button:hover {
   background: var(--muted);
 }
@@ -681,7 +697,6 @@ p {
   transform: translateY(-4px);
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   #scroll-top {
     width: 42px;
@@ -692,7 +707,6 @@ p {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-
     color: var(--muted);
   }
 }
@@ -712,10 +726,12 @@ p {
   padding: 2rem 0;
   color: var(--muted);
 }
+
 .site-footer p {
   margin: 0;
   text-align: center;
 }
+
 .site-footer .links {
   margin-top: 5px;
   display: flex;
@@ -731,9 +747,11 @@ p {
   color: var(--muted);
   transition: color 0.2s ease;
 }
+
 .site-footer .links a:hover {
   color: var(--primary);
 }
+
 .site-footer .links i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
@@ -745,7 +763,6 @@ p {
   border-radius: 8px;
 }
 
-/* ========== Reduced motion ========== */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -753,12 +770,12 @@ p {
   }
 }
 
-/* ========== Mobile Responsive ========== */
 @media (max-width: 768px) {
   .header-inner {
     grid-template-columns: 1fr;
     text-align: center;
   }
+
   .skill-item {
     animation: none;
   }
@@ -773,15 +790,19 @@ p {
     border-right: none;
     animation: none;
   }
+
   h1 {
     font-size: clamp(1.8rem, 6vw, 2.4rem);
   }
+
   p {
     font-size: 0.95rem;
   }
+
   .btn-container {
     justify-content: center;
   }
+
   .btn {
     width: 50%;
     text-align: center;
@@ -798,23 +819,28 @@ p {
   .project-item p {
     font-size: 0.9rem;
   }
+
   .contact .contact-form button {
     margin-bottom: 0;
   }
+
   .contact {
     padding: 1.5rem;
     min-width: auto;
     max-width: fit-content;
   }
+
   .contact .content p {
     font-size: 0.9rem;
   }
+
   .contact .contact-form input,
   .contact .contact-form textarea {
     padding: 0.7rem;
     font-size: 16px;
     max-width: 100%;
   }
+
   .contact .contact-form button {
     padding: 0.7rem;
     font-size: 16px;
@@ -843,19 +869,17 @@ p {
   .skill-item {
     padding: 1rem 0.8rem;
   }
+
   .skills-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   }
+
   .contact {
     padding: 1rem;
     width: 100%;
     border-radius: 2px;
   }
 }
-
-/* ============================= */
-/* PAGE PARCOURS */
-/* ============================= */
 
 .parcours {
   max-width: 900px;
@@ -877,11 +901,10 @@ p {
   font-size: clamp(1.4rem, 3.5vw, 2rem);
   margin-bottom: 1rem;
 }
+
 .parcours-block i {
   color: var(--primary);
 }
-
-/* Timeline */
 
 .timeline {
   list-style: none;
@@ -931,6 +954,7 @@ p {
   margin-top: 3rem;
   text-align: center;
 }
+
 .back-link i {
   margin-right: 0.5rem;
   font-size: 1.2rem;
