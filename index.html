@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio - TATY Si De Flandres</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/images/logo-website.webp"
-    />
     <meta
       name="description"
       content="Portfolio de TATY Si De Flandres — développeur et designer. Projets web (React, JS), UI/UX, certifications FreeCodeCamp."
@@ -38,40 +33,30 @@ https://fonts.googleapis.com
             Développeur & Designer - React, JavaScript, UI/UX
           </p>
         </div>
+        <button
+          id="hamburger-toggle"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <nav class="social-media" aria-label="Réseaux sociaux">
+        <nav class="main-nav" aria-label="Navigation principale">
           <ul>
-            <li>
-              <a href="https://www.instagram.com/djesstaty/"
-                ><i class="fa-brands fa-instagram"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/si-de-flandre-taty-6b471632a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://www.facebook.com/share/1FkgWPpJnS/?mibextid=wwXIfr"
-                ><i class="fa-brands fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/tatysdf">
-                <i class="fa-brands fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:tatysideflandre@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="#projects">Projets</a></li>
+
+            <li><a href="#cert-title">Certifications</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
-        <!-- Toggle dark mode -->
+        <!-- GitHub seul, discret, car c’est ton “portfolio technique” -->
+
         <button
           id="theme-toggle"
           class="theme-toggle"
@@ -100,8 +85,9 @@ https://fonts.googleapis.com
               N'hésitez pas à me contacter pour toute opportunité ou
               collaboration&nbsp;!
             </p>
+
             <div class="btn-container">
-              <a href="#projects" class="btn">Voir mes projets</a>
+              <a href="#projects" class="btn btn-outline"> Voir mes projets </a>
               <button class="btn btn-secondary open-cv-desktop" id="open-cv">
                 Voir mon CV
               </button>
@@ -113,13 +99,9 @@ https://fonts.googleapis.com
                 Voir mon CV
               </a>
 
-              <a
-                href="./assets/cv-entreprise.pdf"
-                download
-                class="btn btn-outline"
-              >
-                Télécharger mon CV
-              </a>
+              <a href="https://github.com/tatysdf/" target="_blank" class="btn"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -301,7 +283,10 @@ https://fonts.googleapis.com
               </a>
             </article>
             <article class="project-item" aria-labelledby="proj9-title">
-              <a href="https://gaming-campus-taty.netlify.app/" target="_blank">
+              <a
+                href="https://tatysdf.github.io/sideflandres.github.io/"
+                target="_blank"
+              >
                 <h3 id="proj9-title">Gaming campus</h3>
                 <picture>
                   <img
@@ -519,6 +504,22 @@ https://fonts.googleapis.com
         <p>
           © <span id="year"></span> TATY Si De Flandres - Tous droits réservés.
         </p>
+        <div class="links">
+          <a
+            href="https://www.linkedin.com/in/si-de-flandre-taty-6b471632a"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a href="https://github.com/tatysdf" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="mailto:tatysideflandre@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
       </div>
     </footer>
 

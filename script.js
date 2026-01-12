@@ -149,7 +149,6 @@ window.addEventListener("scroll", updateScrollProgress, { passive: true });
 window.addEventListener("resize", updateScrollProgress);
 document.addEventListener("DOMContentLoaded", updateScrollProgress);
 
-// ===== Smooth scroll (optionnel pour ancres internes) =====
 document.documentElement.style.scrollBehavior = "smooth";
 
 // ===== Dark mode toggle =====
@@ -218,3 +217,32 @@ scrollTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// ===== Hamburger mobile =====
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger-toggle");
+  const nav = document.querySelector(".main-nav");
+
+  if (!hamburger || !nav) return;
+
+  // Toggle menu au clic
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    nav.classList.toggle("active");
+
+    const expanded = hamburger.classList.contains("active");
+    hamburger.setAttribute("aria-expanded", expanded);
+  });
+
+  // Fermer le menu au clic sur un lien
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        hamburger.classList.remove("active");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+});
+

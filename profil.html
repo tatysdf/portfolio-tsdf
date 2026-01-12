@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Parcours — TATY Si De Flandres</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Parcours, formation et projet professionnel de TATY Si De Flandres, développeur web et designer UI/UX."
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="
+https://fonts.googleapis.com
+"
+    />
+    <link rel="stylesheet" href="https://fonts.gstatic.com" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="content header-inner">
+        <div class="brand">
+          <h1 id="site-title" class="typing">TATY Si De Flandres</h1>
+          <p class="subtitle">
+            Développeur & Designer - React, JavaScript, UI/UX
+          </p>
+        </div>
+        <button
+          id="hamburger-toggle"
+          class="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="main-nav" aria-label="Navigation principale">
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="profil.html" class="active">Profil</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#cert-title">Certifications</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- GitHub seul, discret, car c’est ton “portfolio technique” -->
+
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-label="Basculer le thème (clair/sombre)"
+        >
+          <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+    <main class="section">
+      <div class="content parcours">
+        <h1>Mon parcours</h1>
+
+        <p class="lead">
+          Je suis <strong>TATY Si De Flandres</strong>, développeur web et
+          designer UI/UX, passionné par la création d’expériences numériques
+          modernes et efficaces.
+        </p>
+
+        <section class="parcours-block">
+          <h2>🎓 Formation</h2>
+
+          <ul class="timeline">
+            <li>
+              <span class="date">2023</span>
+              <div>
+                <strong>Baccalauréat</strong><br />
+                Lycée National Léon Mba - Libreville, Gabon
+              </div>
+            </li>
+
+            <li>
+              <span class="date">2025</span>
+              <div>
+                <strong>BTS SIO OPTION SLAM</strong><br />
+                Scholia - Paris, France<br />
+              </div>
+            </li>
+
+            <li class="current">
+              <span class="date">En cours</span>
+              <div>
+                <strong>Bachelor Concepteur Développeur d’Applications</strong
+                ><br />
+                Formation orientée développement logiciel, architecture et
+                conception d’applications.
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="parcours-block">
+          <h2>Pourquoi le développement ?</h2>
+          <p>
+            J’ai choisi le développement parce qu’il me permet de transformer
+            des idées en solutions concrètes. J’aime analyser un besoin,
+            concevoir une solution et la traduire en une application
+            fonctionnelle, performante et agréable à utiliser.
+          </p>
+          <p>
+            Le développement web et l’UX design me permettent de combiner
+            rigueur technique et créativité, avec un objectif constant : créer
+            des produits utiles pour les utilisateurs.
+          </p>
+        </section>
+
+        <section class="parcours-block">
+          <h2>Projet professionnel <i class="fa-solid fa-briefcase"></i></h2>
+          <p>
+            Je recherche un poste en tant que
+            <strong>développeur web</strong> ou <strong>designer UX/UI</strong>,
+            dans un environnement où je peux continuer à apprendre, progresser
+            et contribuer à des projets réels.
+          </p>
+          <p>
+            Mon ambition est d’évoluer vers un profil capable de concevoir des
+            applications complètes, de l’interface utilisateur à la logique
+            métier.
+          </p>
+        </section>
+
+        <section class="parcours-block">
+          <h2>Centres d’intérêt <i class="fa-solid fa-heart"></i></h2>
+          <p>
+            Je m’intéresse particulièrement aux nouvelles technologies, aux
+            frameworks JavaScript modernes, aux outils de design et aux bonnes
+            pratiques de développement.
+          </p>
+          <p>
+            J’aime expérimenter, apprendre en continu et rester à jour sur
+            l’évolution du web et du produit numérique.
+          </p>
+        </section>
+
+        <div class="back-link">
+          <a href="index.html" class="btn">
+            <i class="fa-solid fa-arrow-left"></i> Retour au portfolio</a
+          >
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburger = document.getElementById("hamburger-toggle");
+        const nav = document.querySelector(".main-nav");
+
+        if (!hamburger || !nav) return;
+
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
+
+          const expanded = hamburger.classList.contains("active");
+          hamburger.setAttribute("aria-expanded", expanded);
+        });
+        nav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            if (nav.classList.contains("active")) {
+              nav.classList.remove("active");
+              hamburger.classList.remove("active");
+              hamburger.setAttribute("aria-expanded", "false");
+            }
+          });
+        });
+      });
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("theme-toggle");
+        const body = document.body;
+        
+        if (localStorage.getItem("theme") === "dark") {
+          body.classList.add("theme-dark");
+        }
+
+        toggle.addEventListener("click", () => {
+          body.classList.toggle("theme-dark");
+          localStorage.setItem(
+            "theme",
+            body.classList.contains("theme-dark") ? "dark" : "light"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
