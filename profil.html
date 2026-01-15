@@ -2,11 +2,16 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <title>Parcours — TATY Si De Flandres</title>
+    <title>Parcours - TATY Si De Flandres</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
       content="Parcours, formation et projet professionnel de TATY Si De Flandres, développeur web et designer UI/UX."
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo-website.webp"
+      type="image/x-icon"
     />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="styles.css" />
@@ -150,6 +155,31 @@ https://fonts.googleapis.com
             l’évolution du web et du produit numérique.
           </p>
         </section>
+        <section class="playlist">
+          <h2>Mes playlists du moment <i class="fa-solid fa-music"></i></h2>
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/3Fv9YdSZgVuDQptdKTs7HN?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+          <iframe
+            data-testid="embed-iframe"
+            style="border-radius: 12px"
+            src="https://open.spotify.com/embed/playlist/74CCkLeERcLV2Ivzca8KxH?utm_source=generator"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
+          ></iframe>
+        </section>
 
         <div class="back-link">
           <a href="index.html" class="btn">
@@ -158,6 +188,30 @@ https://fonts.googleapis.com
         </div>
       </div>
     </main>
+    <footer class="site-footer">
+      <div class="content">
+        <p>
+          © <span id="year"></span> TATY Si De Flandres - Tous droits réservés.
+        </p>
+        <div class="links">
+          <a
+            href="https://www.linkedin.com/in/si-de-flandre-taty-6b471632a"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+
+          <a href="https://github.com/tatysdf" target="_blank">
+            <i class="fa-brands fa-github"></i>
+          </a>
+
+          <a href="mailto:tatysideflandre@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const hamburger = document.getElementById("hamburger-toggle");
@@ -185,7 +239,7 @@ https://fonts.googleapis.com
       document.addEventListener("DOMContentLoaded", () => {
         const toggle = document.getElementById("theme-toggle");
         const body = document.body;
-        
+
         if (localStorage.getItem("theme") === "dark") {
           body.classList.add("theme-dark");
         }
